@@ -1,0 +1,103 @@
+.home-block {
+    padding: 15px 0;
+
+    .home {
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__left {
+            display: flex;
+
+
+            &>li {
+                position: relative;
+
+                &>a {
+                    padding-right: 20px;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    color: $mainColor;
+                    font-weight: 700;
+                    line-height: 125%;
+                    position: relative;
+
+                    &::after {
+                        content: "\f078";
+                        font-family: $font-awesome;
+                        font-weight: 700;
+                        font-size: 10px;
+                        margin-left: 10px;
+
+                    }
+
+                    &+ul {
+                        position: absolute;
+                        display: none;
+                    }
+                }
+
+                &:hover {
+                    a+ul {
+                        display: block;
+                        background: $color-secondary;
+                        min-width: 150px;
+                        padding: 4px 8px;
+                    }
+                }
+
+            }
+
+
+        }
+
+        &__logo {
+            text-align: center;
+        }
+
+        &__right {
+            text-align: right;
+
+            a {
+                position: relative;
+                cursor: pointer;
+                padding-left: 25px;
+                margin-right: 30px;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 125%;
+                color: $mainColor;
+                font-family: $fontFamily;
+
+                &::after {
+                    content: "\f07a";
+                    position: absolute;
+                    font-family: $font-awesome;
+                    font-weight: 700;
+                    left: 0;
+                    top: 0;
+                }
+            }
+
+            button {
+                color: $mainColor;
+                font-weight: 700;
+                font-size: 18px;
+                padding: 14px 46px;
+                border-radius: 3px;
+
+                &:hover {
+                    padding: 14px 46px;
+                    color: white;
+                    background-color: $color-secondary;
+                    border-radius: 3px;
+                }
+
+
+            }
+
+        }
+    }
+}

@@ -1,0 +1,579 @@
+@use "sass:math";
+@import "mixins";
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+//&display=swap&subset=cyrillic-ext
+@import "fonts";
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+//@import "icons";
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontFamily: "proximanova";
+$font-secondary: "";
+$font-tertiary: "";
+$fontSize: 16;
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+//<ПЕРЕМЕННЫЕ>==========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1800px; // +30 padding
+$mainColor: #1E2E36;
+$color-secondary: #44C697;
+$color-tertiary: "";
+$color-font: "";
+$font-awesome: "Font Awesome 6 Free";
+$screen-lg: 1400px;
+$screen-md: 992px;
+$screen-sm: 768px;
+
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $mainColor;
+
+  &.lock {
+    overflow: hidden;
+
+  }
+}
+
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: $maxWidthContainer;
+
+}
+
+
+//</ОБОЛОЧКА>===========================================================================================================
+
+@import "header";
+@import "null";
+@import "grid";
+@import "slider";
+@import "tabs";
+@import "home";
+@import "slick";
+@import "slick-theme";
+@import "footer";
+
+
+
+
+//</Main>========================================================================================
+.page {
+
+  padding-top: 40px;
+
+
+  .mid {
+    &__content {
+      position: relative;
+
+      h4 {
+
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 125%;
+        color: white;
+        border-bottom: 3px solid $color-secondary;
+
+
+      }
+
+      &-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 20px 20px;
+
+        p {
+          display: none;
+          font-size: 18px;
+          line-height: 125%;
+          color: white;
+
+
+        }
+
+        &:hover {
+          p {
+            display: block;
+
+
+          }
+        }
+      }
+    }
+
+
+  }
+
+  .title {
+
+    position: relative;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 100px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 125%;
+
+
+    h2 {
+      &::before {
+        z-index: -1;
+
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 50px;
+        background-color: $color-secondary;
+        top: 4px;
+        left: -2px;
+
+      }
+    }
+  }
+
+  &__category-row {
+    display: flex;
+    padding-top: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+  }
+
+  &__category-item {
+    padding: 15px;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      margin-bottom: 75px;
+      border-bottom: 3px solid white;
+
+      i {
+        font-size: 100px;
+        color: $mainColor;
+
+        &:hover {
+          color: $color-secondary;
+
+        }
+      }
+
+      p {
+        text-transform: uppercase;
+        font-size: 24px;
+        line-height: 125%;
+        font-weight: 700;
+        color: $mainColor;
+
+
+      }
+
+      &:hover {
+        border-bottom: 3px solid $color-secondary;
+      }
+
+
+    }
+  }
+
+  &__category-block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  &__category-sell {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px -50px;
+    justify-content: center;
+  }
+
+  &__category-sell-item {
+    position: relative;
+    flex: 0 1 calc(100% / 3 - 100px);
+    margin: 20px 50px;
+
+
+
+    img {
+      max-width: 586px;
+      width: 100%;
+    }
+
+
+    .name-item {
+      position: absolute;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 125%;
+      top: 10px;
+      color: white;
+      background-color: $mainColor;
+      padding: 5px 15px;
+      text-transform: uppercase;
+    }
+
+    .name-subtitle {
+      position: absolute;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 125%;
+      top: 50px;
+      color: white;
+      background-color: red;
+      padding: 5px 15px;
+      text-transform: uppercase;
+    }
+
+    .price {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 125%;
+      text-transform: uppercase;
+      padding: 15px 0;
+
+      &:hover {
+        background-color: $color-secondary;
+        color: white;
+      }
+
+      p {
+        margin-left: 15px;
+      }
+
+      span {
+        margin-right: 15px;
+      }
+
+    }
+
+    .price-subtitle {
+      display: flex;
+
+      span {
+        text-decoration-line: line-through;
+        color: #BCBDBB;
+        font-size: 18px;
+
+      }
+
+      p {
+        margin-right: 10px;
+        color: red;
+      }
+
+    }
+  }
+
+  .button {
+    text-transform: uppercase;
+    display: block;
+    max-width: max-content;
+    margin: 50px auto;
+
+    a {
+      color: $mainColor;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 14px 46px;
+      border-radius: 3px;
+
+      &:hover {
+        padding: 14px 46px;
+        color: white;
+        background-color: $color-secondary;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  .about {
+
+    &__row {
+      display: flex;
+      margin-top: 50px;
+      justify-content: space-between;
+    }
+
+    &__text {
+      position: absolute;
+      z-index: 1;
+      max-width: 710px;
+      width: 100%;
+      margin: 100px 0;
+      background-color: white;
+      padding: 50px 30px 50px 50px;
+      border-right: 20px solid $color-secondary;
+
+      span {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 125%;
+        color: $color-secondary;
+        text-transform: uppercase;
+      }
+
+
+      p {
+        margin-bottom: 15px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 125%;
+
+      }
+    }
+
+    &__right {
+
+      img {
+        position: relative;
+        max-height: 675px;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+        min-height: 675px;
+
+      }
+    }
+  }
+
+  .ask {
+
+    &__row {
+      display: flex;
+      margin-top: 50px;
+      justify-content: space-between;
+    }
+
+    &__left {
+      position: relative;
+      max-height: 675px;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+
+    }
+
+    &__right {
+      position: absolute;
+      z-index: 1;
+      max-width: 528px;
+      width: 100%;
+      margin: 100px 0;
+      background-color: white;
+      padding: 50px 30px 50px 50px;
+      border-left: 20px solid $color-secondary;
+      right: 0;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        max-width: 432px;
+        width: 100%;
+
+        input {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 125%;
+          padding: 14px;
+          border: 1px solid $mainColor;
+          margin-bottom: 15px;
+
+          &::placeholder {
+            color: $mainColor;
+            opacity: 0.6;
+          }
+
+        }
+
+
+      }
+
+
+    }
+
+    &__consultation {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 125%;
+
+      h4 {
+        margin-bottom: 30px;
+      }
+
+      p {
+        max-width: 375px;
+        width: 100%;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 125%;
+        margin-top: 15px;
+
+        span {
+          font-weight: 700;
+          line-height: 125%;
+        }
+      }
+
+    }
+
+    &__submit {
+      color: white;
+      background-color: $color-secondary;
+      text-transform: uppercase;
+      border: none !important;
+
+
+    }
+
+  }
+
+  &__top {
+    position: relative;
+
+    .owl-item {
+      img {
+        display: block;
+        width: 100%;
+        min-height: 700px;
+        height: 100%;
+        object-fit: cover;
+      }
+
+    }
+
+  }
+
+  &__slider {
+    position: absolute;
+    top: -20px;
+    left: 50px;
+    text-align: center;
+    z-index: 10;
+    background-color: white;
+    padding: 20px;
+    border-left: 10px solid $color-secondary;
+
+    h4 {
+      font-size: 64px;
+      font-weight: 700;
+      margin-top: 75px;
+    }
+
+    .sub-title {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 125%;
+      margin: 30px 0 10px 0;
+
+    }
+
+    .text {
+      max-width: 360px;
+      width: 100%;
+      font-size: 36px;
+      line-height: 125%;
+
+    }
+
+    a {
+      display: inline-block;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $mainColor;
+      padding: 14px 46px;
+      margin: 30px 0;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: white;
+        background-color: $color-secondary;
+        transition: all 0.3s ease;
+      }
+
+    }
+
+    .number-slider {
+      display: flex;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 36px;
+      align-items: flex-end;
+
+      .total-item {
+        font-size: 24px;
+
+      }
+
+
+
+    }
+
+    .arrow {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+
+      .prev {
+        margin: 0 4px;
+        cursor: pointer;
+      }
+
+      .next {
+        margin: 0 4px;
+        cursor: pointer;
+      }
+
+
+    }
+
+
+
+  }
+
+
+
+}

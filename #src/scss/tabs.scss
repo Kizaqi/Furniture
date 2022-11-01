@@ -1,0 +1,36 @@
+.tab-triggers {
+  &__item {
+    margin: 0px 15px 0px 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+    &:hover,
+    &:focus {
+      color: red;
+    }
+  }
+  &__item--active {
+    color: red;
+  }
+}
+
+.tabs-content {
+  &__item {
+    visibility: hidden;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform: scale(0);
+  }
+  &__item--active {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    width: auto;
+    height: auto;
+    transform: scale(1);
+  }
+}
