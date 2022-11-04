@@ -172,6 +172,9 @@ body.lock {
   display: -ms-flexbox;
   display: flex;
   color: #1E2E36;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__left p {
@@ -203,6 +206,7 @@ body.lock {
   -o-transition: all 0.6s ease 0s;
   transition: all 0.6s ease 0s;
   cursor: pointer;
+  padding: 20px;
 }
 
 .header__left .call-block:hover {
@@ -218,6 +222,7 @@ body.lock {
   background: #44C697;
   padding: 5px 10px;
   cursor: pointer;
+  top: 62px;
 }
 
 .header__left .call-block ul li a {
@@ -229,7 +234,6 @@ body.lock {
 
 .header__left .call-block__tel {
   position: relative;
-  top: 3px;
 }
 
 .header__left .call-block__tel::before {
@@ -245,7 +249,7 @@ body.lock {
   content: "\f078";
   font-family: "Font Awesome 6 Free";
   font-weight: 700;
-  top: 7px;
+  top: 3px;
   right: -16px;
   font-size: 10px;
 }
@@ -428,7 +432,7 @@ h6 {
 .owl-next {
   position: absolute;
   right: 20px;
-  top: 53%;
+  top: 45%;
   width: 30px;
   height: 30px;
 }
@@ -444,7 +448,7 @@ h6 {
 .owl-prev {
   position: absolute;
   left: 20px;
-  top: 50%;
+  top: 45%;
   width: 30px;
   height: 30px;
 }
