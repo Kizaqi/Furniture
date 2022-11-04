@@ -94,21 +94,13 @@
     }
 
     &__logo {
+
         position: relative;
         margin: 45px 0 0 30px;
 
-
-        &::before {
+        a {
             position: absolute;
-            content: "\f062";
-            color: #fff;
-            font-family: "Font Awesome 6 Free";
-            font-weight: 700;
-            background-color: #44c697;
-            top: -60px;
-            border-radius: 25px;
-            text-align: center;
-            padding: 15px;
+            top: -72px;
         }
 
     }
@@ -119,6 +111,7 @@
         margin-top: 50px;
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
 
 
 

@@ -1,5 +1,5 @@
 .home-block {
-    padding: 15px 0;
+    padding-top: 35px;
 
     .home {
         &__content {
@@ -14,15 +14,17 @@
 
             &>li {
                 position: relative;
+                transition: all 0.6s ease 0s;
 
                 &>a {
                     padding-right: 20px;
                     font-size: 18px;
-                    text-transform: uppercase;
+                    text-transform: capitalize;
                     color: $mainColor;
                     font-weight: 700;
                     line-height: 125%;
                     position: relative;
+                    transition: all 0.6s ease 0s;
 
                     &::after {
                         content: "\f078";
@@ -40,11 +42,15 @@
                 }
 
                 &:hover {
+                    transition: all 0.6s ease 0s;
+
                     a+ul {
                         display: block;
                         background: $color-secondary;
                         min-width: 150px;
                         padding: 4px 8px;
+                        z-index: 15;
+                        transition: all 0.6s ease 0s;
                     }
                 }
 
@@ -58,12 +64,16 @@
         }
 
         &__right {
-            text-align: right;
+            width: calc(100% / 3 - 100px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             a {
                 position: relative;
+
                 cursor: pointer;
-                padding-left: 25px;
+                padding: 14px 46px;
                 margin-right: 30px;
                 font-weight: 700;
                 font-size: 18px;
@@ -71,28 +81,43 @@
                 color: $mainColor;
                 font-family: $fontFamily;
 
+                &:hover {
+                    padding: 14px 46px;
+                    display: block;
+                    color: white;
+                    background-color: $color-secondary;
+                    border-radius: 3px;
+                    transition: all 0.6s ease 0s;
+
+                }
+
+
                 &::after {
                     content: "\f07a";
                     position: absolute;
                     font-family: $font-awesome;
                     font-weight: 700;
-                    left: 0;
-                    top: 0;
+                    left: 10px;
+                    top: 15px;
                 }
             }
 
             button {
+                flex-shrink: 0;
                 color: $mainColor;
                 font-weight: 700;
                 font-size: 18px;
                 padding: 14px 46px;
                 border-radius: 3px;
+                transition: all 0.6s ease 0s;
 
                 &:hover {
                     padding: 14px 46px;
                     color: white;
                     background-color: $color-secondary;
                     border-radius: 3px;
+                    transition: all 0.6s ease 0s;
+
                 }
 
 
