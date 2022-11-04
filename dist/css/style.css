@@ -1187,6 +1187,7 @@ h6 {
 
 .page .mid__content {
   position: relative;
+  cursor: pointer;
 }
 
 .page .mid__content h4 {
@@ -1221,13 +1222,6 @@ h6 {
   transition: all 0.5s ease;
 }
 
-.page .mid__content-text:hover {
-  bottom: 0;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
 .page .mid__content-text p {
   -webkit-transition: all 0.6s ease 0s;
   -o-transition: all 0.6s ease 0s;
@@ -1239,7 +1233,14 @@ h6 {
   opacity: 0;
 }
 
-.page .mid__content-text:hover p {
+.page .mid__content:hover .mid__content-text {
+  bottom: 0;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.page .mid__content:hover .mid__content-text p {
   visibility: visible;
   opacity: 1;
   -webkit-transition: all 0.6s ease;
@@ -1438,6 +1439,7 @@ h6 {
   max-width: -moz-max-content;
   max-width: max-content;
   margin: 50px auto;
+  padding: 14px 46px;
 }
 
 .page .button a {
@@ -1446,6 +1448,7 @@ h6 {
   font-size: 18px;
   padding: 14px 46px;
   border-radius: 3px;
+  border: 1px solid #1E2E36;
 }
 
 .page .button a:hover {

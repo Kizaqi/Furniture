@@ -93,6 +93,7 @@ body {
   .mid {
     &__content {
       position: relative;
+      cursor: pointer;
 
       h4 {
 
@@ -101,9 +102,6 @@ body {
         font-size: 36px;
         line-height: 125%;
         color: white;
-
-
-
 
       }
 
@@ -119,11 +117,6 @@ body {
         padding: 20px 20px;
         transition: all 0.5s ease;
 
-        &:hover {
-          bottom: 0;
-          transition: all 0.5s ease;
-        }
-
         p {
           transition: all 0.6s ease 0s;
           font-size: 18px;
@@ -131,16 +124,22 @@ body {
           color: white;
           visibility: hidden;
           opacity: 0;
-        }
 
-        &:hover {
+
+        }
+      }
+
+      &:hover {
+        .mid__content-text {
+          bottom: 0;
+          transition: all 0.5s ease;
 
           p {
             visibility: visible;
             opacity: 1;
             transition: all 0.6s ease;
-
           }
+
         }
       }
     }
@@ -322,6 +321,8 @@ body {
     display: block;
     max-width: max-content;
     margin: 50px auto;
+    padding: 14px 46px;
+
 
     a {
       color: $mainColor;
@@ -330,6 +331,7 @@ body {
       padding: 14px 46px;
       border-radius: 3px;
       border: 1px solid $mainColor;
+
 
       &:hover {
         padding: 14px 46px;
