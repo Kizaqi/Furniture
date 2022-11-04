@@ -220,15 +220,7 @@ body {
         color: $mainColor;
         border-bottom: 3px solid transparent;
         transition: all 0.5s ease;
-
-
       }
-
-
-
-
-
-
     }
   }
 
@@ -337,6 +329,7 @@ body {
       font-size: 18px;
       padding: 14px 46px;
       border-radius: 3px;
+      border: 1px solid $mainColor;
 
       &:hover {
         padding: 14px 46px;
