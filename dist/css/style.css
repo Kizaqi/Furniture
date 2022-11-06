@@ -1101,23 +1101,19 @@ h6 {
   margin: 15px;
 }
 
-.footer__time-work a {
+.footer__time-work p {
   color: white;
   position: relative;
   padding-left: 20px;
 }
 
-.footer__time-work a::before {
+.footer__time-work p::before {
   position: absolute;
   content: "\f133";
   color: #fff;
   font-family: "Font Awesome 6 Free";
   font-weight: 700;
   left: 0;
-}
-
-.footer__time-work a:hover {
-  color: #44C697;
 }
 
 .footer__tel {
@@ -1359,6 +1355,18 @@ h6 {
       -ms-flex: 0 1 calc(33.3333333333% - 100px);
           flex: 0 1 calc(33.3333333333% - 100px);
   margin: 20px 50px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.page__category-sell-item:hover {
+  background-color: #44C697;
+  color: white;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .page__category-sell-item img {
@@ -1407,12 +1415,8 @@ h6 {
   transition: all 0.5s ease;
 }
 
-.page__category-sell-item .price:hover {
-  background-color: #44C697;
-  color: white;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+.page__category-sell-item .price p {
+  margin-left: 10px;
 }
 
 .page__category-sell-item .price span {
@@ -1453,6 +1457,9 @@ h6 {
   padding: 14px 46px;
   border-radius: 3px;
   border: 1px solid #1E2E36;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .page .button a:hover {
@@ -1460,6 +1467,9 @@ h6 {
   color: white;
   background-color: #44C697;
   border-radius: 3px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .page .about__row {
@@ -1558,6 +1568,7 @@ h6 {
   padding: 14px;
   border: 1px solid #1E2E36;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .page .ask__right form input::-webkit-input-placeholder {
@@ -1902,6 +1913,10 @@ h6 {
 
   .header__list li a {
     color: #fff;
+  }
+
+  .home-block {
+    padding-top: 0;
   }
 
   .page__category-item {

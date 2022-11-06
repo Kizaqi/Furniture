@@ -240,6 +240,14 @@ body {
     position: relative;
     flex: 0 1 calc(100% / 3 - 100px);
     margin: 20px 50px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-secondary;
+      color: white;
+      transition: all 0.5s ease;
+    }
 
 
 
@@ -283,11 +291,8 @@ body {
       padding: 15px 0;
       transition: all 0.5s ease;
 
-
-      &:hover {
-        background-color: $color-secondary;
-        color: white;
-        transition: all 0.5s ease;
+      p {
+        margin-left: 10px;
       }
 
 
@@ -330,6 +335,7 @@ body {
       padding: 14px 46px;
       border-radius: 3px;
       border: 1px solid $mainColor;
+      transition: all 0.5s ease;
 
 
       &:hover {
@@ -337,6 +343,7 @@ body {
         color: white;
         background-color: $color-secondary;
         border-radius: 3px;
+        transition: all 0.5s ease;
       }
     }
   }
@@ -432,6 +439,7 @@ body {
           padding: 14px;
           border: 1px solid $mainColor;
           margin-bottom: 15px;
+          cursor: pointer;
 
           &::placeholder {
             color: $mainColor;

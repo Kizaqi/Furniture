@@ -33,8 +33,6 @@
                 }
             }
 
-
-
         }
 
     }
@@ -94,7 +92,6 @@
     }
 
     &__logo {
-
         position: relative;
         margin: 45px 0 0 30px;
 
@@ -149,7 +146,7 @@
     &__time-work {
         margin: 15px;
 
-        a {
+        p {
             color: white;
             position: relative;
             padding-left: 20px;
@@ -162,10 +159,6 @@
                 font-weight: 700;
                 left: 0;
 
-            }
-
-            &:hover {
-                color: $color-secondary;
             }
         }
 
