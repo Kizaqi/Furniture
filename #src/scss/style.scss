@@ -102,12 +102,13 @@ body {
         font-size: 36px;
         line-height: 125%;
         color: white;
+        border-bottom: 3px solid $color-secondary;
 
       }
 
       &-text {
         position: absolute;
-        bottom: -65px;
+        bottom: -60px;
         left: 0;
         z-index: 5;
         display: flex;
@@ -388,18 +389,16 @@ body {
 
       img {
         position: relative;
-        max-height: 675px;
         height: 100%;
         object-fit: cover;
         width: 100%;
-        min-height: 675px;
+
 
       }
     }
   }
 
   .ask {
-
     &__row {
       display: flex;
       margin-top: 50px;
@@ -439,7 +438,7 @@ body {
           padding: 14px;
           border: 1px solid $mainColor;
           margin-bottom: 15px;
-          cursor: pointer;
+
 
           &::placeholder {
             color: $mainColor;
@@ -447,6 +446,7 @@ body {
           }
 
         }
+
 
 
       }
@@ -497,7 +497,6 @@ body {
       img {
         display: block;
         width: 100%;
-        min-height: 700px;
         height: 100%;
         object-fit: cover;
       }
@@ -520,6 +519,7 @@ body {
       font-size: 64px;
       font-weight: 700;
       margin-top: 75px;
+
     }
 
     .sub-title {
@@ -542,16 +542,13 @@ body {
       display: inline-block;
       text-transform: uppercase;
       font-weight: 700;
-      color: $mainColor;
+      color: white;
       padding: 14px 46px;
       margin: 30px 0;
-      transition: all 0.3s ease;
+      background-color: $color-secondary;
 
-      &:hover {
-        color: white;
-        background-color: $color-secondary;
-        transition: all 0.3s ease;
-      }
+
+
 
     }
 
@@ -577,13 +574,22 @@ body {
       margin-top: 50px;
 
       .prev {
-        margin: 0 4px;
+        content: "\f061";
+        border-radius: 50%;
+        border: 1px solid;
+        padding: 5px;
         cursor: pointer;
+        margin-right: 10px;
       }
 
       .next {
-        margin: 0 4px;
+        content: "\f061";
+        border-radius: 50%;
+        border: 1px solid;
+        padding: 5px;
         cursor: pointer;
+        margin-left: 10px;
+
       }
 
 
